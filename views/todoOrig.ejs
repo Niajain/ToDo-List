@@ -1,0 +1,66 @@
+<!-- todolist1 -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="todostyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>TODO List For <%= kindaday %></h1>
+    
+        <ul class="todo-list">
+            <li class="todo-text">Eat food</li>
+            <% for(let i=0;i<nameOfItem.length;i++)
+            {%>
+                <li class="todo-text">
+                    <%= nameOfItem[i] %>
+                </li>
+            <%}%>
+            
+        </ul>
+
+        <form action="/" method="post" class=".todo-actions .todo-form">
+            <input type="text" class="todo_text" name="itemName" placeholder="Enter routine" autocomplete="on">
+            <button type="submit">+</button>
+        </form>
+    </div>
+</body>
+
+</html> -->
+
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+        <h1>TODO List For <%= kindaday %>
+        </h1>
+    </div>
+    <div class="box">
+        <% for(let i=0;i<nameOfItem.length;i++) {%>
+            <div class="item">
+                <input type="checkbox">
+                <p class="todo-text">
+                    <%= nameOfItem[i] %>
+                </p>
+
+            </div>
+            <%}%>
+
+
+                <form action="/" method="post" class="item">
+                    <input type="text" name="itemName" placeholder="Enter routine" autocomplete="on">
+                    <button type="submit" name="listbtn" value=<%= kindaday %>>+</button>
+                </form>
+
+    </div>
+
+
+
+    </div>
+<%- include("footer") -%>

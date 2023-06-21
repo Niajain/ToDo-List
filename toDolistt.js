@@ -2,12 +2,12 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const { application } = require("express");
 const { resolveInclude } = require("ejs");
-
+const date=require(__dirname+"/date.js");
 const app = express();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
-
+console.log(date.getDay());
 var items=[];
 var workItem=[];
 var listItem="Work";
@@ -16,14 +16,8 @@ app.get("/", (req, res) => {
     var today = new Date();
     var currentDay = today.getDay();
     console.log(currentDay);
-    
 
-
-    var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    var today = new Date();
-
-    var day = today.toLocaleDateString("en-US", options); // 9/17/2016
-
+    var day=date.getDate();
     res.render("todoOrig", { kindaday: day , nameOfItem: items});
 })
 

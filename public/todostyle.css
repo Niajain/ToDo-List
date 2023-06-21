@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     padding: 20px;
@@ -48,14 +48,14 @@ h1 {
 .todo_text.completed {
     text-decoration: line-through;
     color: #999;
-}
+} */
 
 /* .todo_text {
     display: flex;
     align-items: center;
 } */
 
-button {
+/* button {
     margin-left: 10px;
     padding: 6px 12px;
     border: none;
@@ -68,7 +68,7 @@ button {
 
 button:hover {
     background-color: #555;
-}
+} */
 
 /* .todo-form {
     display: flex;
@@ -108,3 +108,101 @@ button:hover {
         padding: 5px 10px;
     }
 } */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the container */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Styling the todo list */
+
+.todo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.todo-text {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.todo-text:hover {
+    background-color: #eee;
+}
+
+.todo-text input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+}
+
+.todo-text:hover input[type="checkbox"] {
+    opacity: 1;
+}
+
+.todo-text input[type="checkbox"]:checked {
+    background-color: #ccc;
+}
+
+/* Styling the button */
+
+.todo-actions {
+    margin-top: 10px;
+}
+
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo_text {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.todo_text:hover {
+    background-color: #eee;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0062cc;
+}
+
+/* Styling the gradient background */
+
+.todo-list {
+    background-image: linear-gradient(to right, #f9f9f9, #fff);
+}
